@@ -39,7 +39,8 @@ class AuthController extends Controller
         ]);
 
         $token = $user->createToken('auth_token')->plainTextToken;
-
+        $user->api_token = $token;
+        $user->save();
         return response()
             ->json(['data' => $user,'access_token' => $token, 'token_type' => 'Bearer', 'author' => $user]);
 //        ->json(['data' => $user,'api_token' => $token, 'token_type' => 'Bearer', ]);
@@ -56,6 +57,8 @@ class AuthController extends Controller
         $user = User::where('email', $request['email'])->firstOrFail();
 
         $token = $user->createToken('auth_token')->plainTextToken;
+        $user->api_token = $token;
+        $user->save();
         return response()
             ->json(['message' => 'Hi '.$user->first_name.' '.$user->last_name.', welcome to home','access_token' => $token, 'token_type' => 'Bearer', 'author' => $user]);
 //        ->json(['message' => 'Hi '.$user->first_name.' '.$user->last_name.', welcome home','api_token' => $token, 'token_type' => 'Bearer', ]);
