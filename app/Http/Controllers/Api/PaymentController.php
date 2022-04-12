@@ -49,7 +49,7 @@ class PaymentController extends Controller
     public function inAppPayment()
     {
 //        return "Hello";
-        $user = auth('api')->user();
+        $user = auth()->user();
         $user->confirm_payment = 1;
         $user->inapp_paid = 1;
         $user->save();
