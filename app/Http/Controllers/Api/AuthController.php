@@ -42,7 +42,7 @@ class AuthController extends Controller
         $user->api_token = $token;
         $user->save();
         return response()
-            ->json(['data' => $user,'access_token' => $token, 'token_type' => 'Bearer', 'author' => $user]);
+            ->json(['data' => $user,'success' => true, 'token_type' => 'Bearer', 'author' => $user]);
 //        ->json(['data' => $user,'api_token' => $token, 'token_type' => 'Bearer', ]);
     }
 
