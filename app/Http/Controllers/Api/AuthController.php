@@ -101,7 +101,7 @@ class AuthController extends Controller
 
     public function currentUser(){
 //        return "hello";
-        $user = auth('api')->user();
+        $user = auth()->user();
         return response()->json($user);
     }
 

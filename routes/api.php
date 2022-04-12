@@ -64,7 +64,7 @@ Route::post('author/check/password','AuthorController@checkPassword');
 Route::get('author/detail','AuthorController@getAuthor')->middleware('auth:sanctum');
 //Route::post('logout','AuthorController@logout')->middleware('auth:api');
 
-Route::get('current/user','AuthController@currentUser');
+Route::get('current/user','AuthController@currentUser')->middleware('auth:sanctum');
 /**********************************   Author Route Ends Here   *******************************************/
 
 /**********************************   NFTListing Route Starts Here   *******************************************/
