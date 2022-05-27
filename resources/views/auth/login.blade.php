@@ -78,7 +78,8 @@
                                             {{ __('Forgot Password?') }}
                                         </a>
                                     @endif
-                                </a><br>
+                                </a>
+                                <br>
                             </div>
 
                             <div class="mb-3 mb-3">

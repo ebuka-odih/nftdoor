@@ -21,7 +21,7 @@ class PaymentController extends Controller
             'name' => 'The NFTDoor Signup Fee',
             'description' => 'The NFTDoor one time Signup Fee',
             'local_price' => [
-                'amount' => 0.5,
+                'amount' => 0.99,
                 'currency' => 'USD',
             ],
             'pricing_type' => 'fixed_price',
